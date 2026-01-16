@@ -575,20 +575,18 @@ const NECSMobileApp = () => {
   };
 
   return (
-    <div className="w-full h-screen bg-slate-900 flex items-center justify-center p-4">
-      <div className="scale-[0.85] origin-center md:scale-100">
-        <div className="w-full max-w-md h-[812px] bg-black rounded-[3rem] shadow-2xl overflow-hidden border-8 border-slate-800 relative">
-          {/* Screen Content */}
-          <div className="h-full flex flex-col">
-            <div className="flex-1 overflow-hidden">
-              {currentScreen === "scores" && <LiveScoresScreen />}
-              {currentScreen === "stats" && <PlayerStatsScreen />}
-              {currentScreen === "replays" && <MatchReplaysScreen />}
-              {currentScreen === "bracket" && <BracketScreen />}
-              {currentScreen === "chat" && <ChatScreen />}
-            </div>
-            <NavBar />
+    <div className="w-full min-h-screen bg-slate-900 flex items-center justify-center p-4">
+      <div className="w-full max-w-md h-[90vh] max-h-[812px] bg-black rounded-[3rem] shadow-2xl overflow-hidden border-8 border-slate-800 relative">
+        {/* Screen Content */}
+        <div className="h-full flex flex-col">
+          <div className="flex-1 overflow-hidden">
+            {currentScreen === "scores" && <LiveScoresScreen />}
+            {currentScreen === "stats" && <PlayerStatsScreen />}
+            {currentScreen === "replays" && <MatchReplaysScreen />}
+            {currentScreen === "bracket" && <BracketScreen />}
+            {currentScreen === "chat" && <ChatScreen />}
           </div>
+          <NavBar />
         </div>
       </div>
     </div>
